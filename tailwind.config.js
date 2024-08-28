@@ -53,12 +53,14 @@ module.exports = {
         Rubik:'Rubik',
         Krub:'Krub',
         Poppins:'Poppins',
+        Noto:'Noto Sans',
+        Inder:'Inder',
         "plus-jakarta-sans": "'Plus Jakarta Sans'",
       },
       borderRadius: {
         "21xl": "40px",
         "13xl": "32px",
-        "6xs": "7px",
+        "6xs": "12px",
         xl: "20px",
         "28xl-5": "47.5px",
         "2xl-4": "21.4px",
@@ -107,14 +109,16 @@ module.exports = {
       "3xs": "10px",
       inherit: "inherit",
     },
-    // screens: {
-    //   mq700: {
-    //     raw: "screen and (max-width: 700px)",
-    //   },
-    //   mq450: {
-    //     raw: "screen and (max-width: 450px)",
-    //   },
-    // },
+    screens: {
+      sm: '300px', // Custom small screen size
+      // Other breakpoints can also be customized here
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
+    aspectRatio: {
+      '0.6': '6/ 10', // Custom aspect ratio where height is greater than width
+    },
   },
   corePlugins: {
     preflight: false,

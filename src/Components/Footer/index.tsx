@@ -1,12 +1,10 @@
 import React from "react";
-import { Typography, Link, useMediaQuery, Box } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import FacebookIcon from "../../assets/ic Facebook.svg";
-import Image from "mui-image";
 import ZeddlabzIcon from "../../assets/ZEDDLABZ.svg";
+import FacebookIcon from "../../assets/ic Facebook.svg";
 import InstagramIcon from "../../assets/Frame.svg";
 import LinkedInIcon from "../../assets/ic Linkedin.svg";
 import TwitterIcon from "../../assets/ic Twitter.svg";
+
 const Footer = () => {
   const columns = [
     "Company",
@@ -17,161 +15,128 @@ const Footer = () => {
     "Contact us",
   ];
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <footer className="text-light py-4" style={{ backgroundColor: "#060F22" }}>
-      <Box
-        display={"flex"}
-        justifyContent={'space-around'}
-        width={"100%"}
-        sx={{ marginBottom: "20px" ,marginTop:'40px' }}
-        gap={72}
-      >
-        <Link
-          href="https://www.facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Box
-            component="img"
-            src={ZeddlabzIcon}
-            alt="ZeddLabz"
-            width={"162px"}
-            height={"56px"}
-          />
-        </Link>
-        <Box sx={{ display: "flex", gap: 2 }}>
-          {/* FaceBook icon */}
-          <Link href="https://www.facebook.com" target="_blank" color="inherit">
-            <Box
-              sx={{
-                border: "1.96px solid #FFFFFF",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              width={"45.74px"}
-              height={"45.74px"}
+    <footer className="text-white py-4 bg-[#060F22]">
+      <div className="flex justify-between mx-auto w-screen px-4 md:px-24">
+        <div>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={ZeddlabzIcon}
+              alt="ZeddLabz"
+              className="w-[162px] h-[56px]"
+            />
+          </a>
+        </div>
+        <div>
+          <div className="flex gap-2">
+            {/* Facebook icon */}
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image src={FacebookIcon} width={"9.11px"} height={"15.84px"} />
-            </Box>
-          </Link>
-          {/* instagram icon */}
-          <Link href="https://www.facebook.com" target="_blank" color="inherit">
-            <Box
-              sx={{
-                border: "1.96px solid #FFFFFF",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              width={"45.74px"}
-              height={"45.74px"}
+              <div className="w-[45.74px] h-[45.74px] border-[1.96px] border-white rounded-full flex justify-center items-center">
+                <img
+                  src={FacebookIcon}
+                  alt="Facebook"
+                  className="w-[9.11px] h-[15.84px]"
+                />
+              </div>
+            </a>
+            {/* Instagram icon */}
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image src={InstagramIcon} width={"18.3px"} height={"18.3px"} />
-            </Box>
-          </Link>
-          {/* Linkdin Icon */}
-          <Link href="https://www.facebook.com" target="_blank" color="inherit">
-            <Box
-              sx={{
-                border: "1.96px solid #FFFFFF",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              width={"45.74px"}
-              height={"45.74px"}
+              <div className="w-[45.74px] h-[45.74px] border-[1.96px] border-white rounded-full flex justify-center items-center">
+                <img
+                  src={InstagramIcon}
+                  alt="Instagram"
+                  className="w-[18.3px] h-[18.3px]"
+                />
+              </div>
+            </a>
+            {/* LinkedIn icon */}
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image src={LinkedInIcon} width={"15.51px"} height={"15.51px"} />
-            </Box>
-          </Link>
-          {/* Twitter icon */}
-          <Link href="https://www.facebook.com" target="_blank" color="inherit">
-            <Box
-              sx={{
-                border: "1.96px solid #FFFFFF",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              width={"45.74px"}
-              height={"45.74px"}
+              <div className="w-[45.74px] h-[45.74px] border-[1.96px] border-white rounded-full flex justify-center items-center">
+                <img
+                  src={LinkedInIcon}
+                  alt="LinkedIn"
+                  className="w-[15.51px] h-[15.51px]"
+                />
+              </div>
+            </a>
+            {/* Twitter icon */}
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image src={TwitterIcon} width={"16.06px"} height={"16.06px"} />
-            </Box>
-          </Link>
-        </Box>
-      </Box>
+              <div className="w-[45.74px] h-[45.74px] border-[1.96px] border-white rounded-full flex justify-center items-center">
+                <img
+                  src={TwitterIcon}
+                  alt="Twitter"
+                  className="w-[16.06px] h-[16.06px]"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <Box className="container">
-        <Box className="row">
+      <div className="container mx-auto px-4 font-lato">
+      <div className="grid sm:grid-cols-2 sm:text-center md:text-left  md:grid-cols-6 md:!text-left gap-6">
           {Array(12)
-            .fill(0)
+            .fill(null)
             .map((_, idx) => (
-              <div key={idx} className="col-12 col-sm-4 col-md-2 mb-3">
-                <Typography
-                  sx={{
-                    color: "#5498FE",
-                    fontFamily: "Lato",
-                    fontWeight: "500",
-                    fontSize: "24px",
-                    alignItems: "center",
-                    lineHeight: "40px",
-                    marginBottom: "10px",
-                    marginTop:'30px'
-                  }}
-                  variant={isMobile ? "h6" : "h5"}
-                >
+              <div key={idx}>
+                <h5 className="text-[#5498FE] font-lato font-medium text-9xl-3 mb-3 mt-8">
                   {columns[0]}
-                </Typography>
+                </h5>
                 {columns.slice(1).map((text, subIdx) => (
-                  <Typography
+                  <p
                     key={subIdx}
-                    sx={{
-                      color: "#ADADAD",
-                      fontFamily: "Lato",
-                      fontWeight: "400",
-                      fontSize: "24px",
-                      alignItems: "center",
-                      lineHeight: "40px",
-                    }}
+                    className="text-white py-1 font-lato text-xl leading-6 mb-1"
                   >
-                    <Link href="#" color="inherit" underline="none">
+                    <a
+                      href="#"
+                      className="no-underline font-lato hover:underline text-white"
+                    >
                       {text}
-                    </Link>
-                  </Typography>
+                    </a>
+                  </p>
                 ))}
               </div>
             ))}
-        </Box>
-        <hr className="bg-light" />
-        <div className="row justify-content-between">
-          <div className="col-12 col-md-auto text-center text-md-left mb-2 mb-md-0">
-            <Typography variant="body2">
-              All right reserved @2023, ZEDDLABZ
-            </Typography>
+        </div>
+        <hr className="border-t border-gray-500 mt-8" />
+        <div className="flex flex-col md:flex-row justify-between items-center mt-4">
+          <div className="text-center md:text-left mb-2 md:mb-0">
+            <p className="text-sm">All rights reserved @2023, ZEDDLABZ</p>
           </div>
-          <div className="col-12 col-md-auto text-center text-md-right">
-            <Typography variant="body2">
-              <Link href="#" color="inherit" underline="none">
+          <div className="text-center md:text-right">
+            <p className="text-sm">
+              <a href="#" className="text-white no-underline hover:underline">
                 Terms & conditions
-              </Link>{" "}
-              |{" "}
-              <Link href="#" color="inherit" underline="none">
+              </a>
+              |
+              <a href="#" className="text-white no-underline hover:underline">
                 Privacy Policy
-              </Link>
-            </Typography>
+              </a>
+            </p>
           </div>
         </div>
-      </Box>
+      </div>
     </footer>
   );
 };
-
 export default Footer;

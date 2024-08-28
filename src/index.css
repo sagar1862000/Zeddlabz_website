@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Add this to your CSS file */
+/* index.css */
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* You may need to adjust your CSS file as follows */
+/* .card-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+} */

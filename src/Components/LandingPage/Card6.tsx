@@ -1,94 +1,65 @@
-import React from 'react';
-import { Box, Typography, Toolbar, Container, Card, CardContent, useMediaQuery, CssBaseline, GlobalStyles } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import img7 from '../../assets/img7.svg'
-import styled from '@emotion/styled';
-const theme = createTheme({
-  typography: {
-    fontFamily: 'Lato, sans-serif',
-    
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-    },
-  },
-});
-const StyledContainer = styled(Container)(({ theme }) => ({
-  minHeight: '100vh',
-  color: '#060F22',
-  // padding: theme.spacing(3),
-}));
+import img7 from "../../assets/img7.svg";
 const Card6 = () => {
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <GlobalStyles
-      styles={{
-        body: { backgroundColor: '#060F22', margin: 0, padding: 0, color: '#ffffff' },
-        html: { backgroundColor: '#060F22' },
-      }}
-    />
-    <StyledContainer>
-      <Card sx={{ mt: 5, backgroundColor: '#060F22' }}>
-        <CardContent>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            mb={2}
-            sx={{
-              flexDirection: isMobile ? 'column' : 'row',
-            }}
-          >
+    <div className="flex justify-center items-center bg-slate-900 font-lato ">
+      <div className="self-stretchmy-auto max-md:max-w-full">
+        <div className="flex gap-3 w-11/12 max-md:flex-col mx-auto ">
+          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <img
-              src={img7} 
-              alt="Team discussion"
-              style={{
-                width: isMobile ? '100%' : '100%',
-                borderRadius: '8px',
-                borderTopLeftRadius:'18px',
-                borderTopRightRadius:'18px'
-              }}
+              loading="lazy"
+              src={img7}
+              className="object-contain grow w-full aspect-[1.29] rounded-[32px] max-md:mt-10 max-md:max-w-full"
             />
-          </Box>
-          <Box textAlign="left" sx={{padding:'20px'}}>
-            <Typography variant="overline" display="block" gutterBottom sx={{color:'#2CB9FF',fontFamily:'lato',fontWeight:'600',fontSize:'18px',lineHeight:'22px'}}>
-              Customer stories
-            </Typography>
-            <Typography variant="h4" component="h1" gutterBottom sx={{ fontSize: isMobile ? '1.5rem' : '2.125rem',color:'#ffff',fontFamily:'lato',fontWeight:'700',lineHeight:'52px' }}>
-              Adobe Experience Cloud migration: Web development and A/B testing.
-            </Typography>
-            <Typography variant="body1" paragraph  sx={{color:'#ffff',fontFamily:'lato',fontWeight:'400',lineHeight:'30px' }}>
-              ZeddLabz experts helped the Microsoft 365 team migrate to Adobe Experience Cloud. Find out how we helped deliver tailored functionality, speedier modifications, and first-class customer experiences.
-            </Typography>
-          </Box>
-        </CardContent>
-      </Card>
-      <Box
-        mt={5}
-        p={isMobile ? 2 : 3}
-        bgcolor="#ffff"
-        textAlign="center"
-        borderRadius="8px"
-        color="#ffffff"
-      >
-        <Typography variant="h5" gutterBottom sx={{ fontSize: isMobile ? '1.25rem' : '1.5rem',color:'black' }}>
-          We believe in defining the future.
-        </Typography>
-        <Typography variant="body1" sx={{color:'black'}}>
-          With this insurgent mindset, we help companies at every step of their digital transformation journeys, from building and scaling cutting-edge technology solutions to transforming legacy IT infrastructure into digital platforms.
-        </Typography>
-      </Box>
-    </StyledContainer>
-  </ThemeProvider>
+          </div>
+          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col self-stretch my-auto text-white max-md:mt-10 max-md:max-w-full">
+              <div className="flex flex-col pr-16 pl-16 w-full max-w-[760px] max-md:px-5 max-md:max-w-full">
+                <div className="flex flex-wrap w-full max-md:max-w-full">
+                  <div className="flex flex-col grow shrink px-3">
+                    <div className="flex flex-col font-lato w-full max-md:max-w-full">
+                      <div className="flex flex-col items-start w-full text-lg font-extrabold leading-none text-center max-md:max-w-full">
+                        <div className="flex flex-col max-w-full">
+                          <div className="max-md:px-5 text-[#2CB9FF]">
+                            Customer Support
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-full text-24xl font-bold leading-11 font-lato tracking-tighter ">
+                        Adobe Experience Cloud migration: Web development and
+                        A/B testing.
+                      </div>
+                      <div className="mt-6 w-full text-mini  max-md:max-w-full">
+                        ZeddLabz experts helped the Microsoft 365 team migrate
+                        to Adobe Experience Cloud. Find out how we helped
+                        deliver tailored functionality, speedier modifications,
+                        and first-class customer experiences.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white rounded-lg font-lato my-12 py-8 sm:w-screen md:w-3/5 mx-auto">
+          <div className="flex flex-col font-lato  w-full text-black max-md:max-w-full">
+            <div className="flex flex-col pb-4 justify-center items-center  w-full text-3xl leading-none max-md:max-w-full">
+              <div className="px-0.5  max-w-full font-semibold text-2xl ">
+                We believe in defining the future
+              </div>
+            </div>
+            <div className=" text-mini text-center max-md:max-w-full font-normal px-24">
+              With this insurgent mindset, we help companies at every step of
+              their digital transformation journeys, from building and scaling
+              cutting-edge technology solutions to transforming legacy IT
+              infrastructure into digital platforms.
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  )
-}
-
-export default Card6
+export default Card6;

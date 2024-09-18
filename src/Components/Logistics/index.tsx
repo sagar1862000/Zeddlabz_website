@@ -6,9 +6,10 @@ import Card4 from './Card4'
 import Card5 from './Card5'
 import Card6 from './Card6'
 import Card7 from './Card7'
+import Card8 from './Card8'
 const Logistics = () => {
   return (
-    <>
+    <div className='overflow-x-hidden'>
     <Card1/>
     <Card2/>
     <Card3/>
@@ -16,7 +17,8 @@ const Logistics = () => {
     <Card5/>
     <Card6/>
     <Card7/>
-    </>
+    <Card8/>
+    </div>
   )
 }
 

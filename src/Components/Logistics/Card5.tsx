@@ -1,65 +1,59 @@
 import React from "react";
-
+import img7 from "../../assets/Logistics/Img7.svg";
+import img1 from "../../assets/Logistics/img1.svg";
+import img2 from "../../assets/Logistics/img2.svg";
+import img3 from "../../assets/Logistics/img3.svg";
+import img4 from "../../assets/Logistics/img4.svg";
+import img5 from "../../assets/Logistics/img5.svg";
+import img6 from "../../assets/Logistics/img6.svg";
+import card from "@material-tailwind/react/theme/components/card";
 const Card5 = () => {
+  const Cards = [
+    { img: img1, title: "Safe Package" },
+    { img: img2, title: "Ship Everyware" },
+    { img: img3, title: "Global Tracking" },
+    { img: img4, title: "24/7 Support" },
+    { img: img5, title: "In Time Delivery" },
+    { img: img6, title: "Transparant Pricing" },
+  ];
   return (
-    <div className="flex flex-col justify-center items-center py-24 pr-40 pl-40 text-white bg-slate-900 max-md:px-5 max-md:py-24">
-      <div className="flex flex-col items-center max-w-full w-11/12">
-        <div className="flex flex-col items-center w-full gap-16">
-          <div className="flex flex-col items-center max-w-full w-[765px]">
-            <div className="flex flex-col justify-center items-center w-full">
-              <div className="max-w-full text-center text-13xl font-semibold  max-md:max-w-full md:text-35xl font-Rubik">
-                Get in touch with us
-              </div>
-              <div className="text-2xl md:text-4xl font-medium leading-9 text-center max-md:max-w-full font-lato">
-                Leverage agile frameworks to provide a robust synopsis for
-                strategy foster collaborative thinking to further the overall
-                value.
-              </div>
-            </div>
+    <div className="w-screen bg-white">
+      <div className="w-full flex sm:flex-col md:flex-row">
+        <div className="w-full bg-[#091242] flex place-content-center ">
+          <div className="items-center flex place-content-center">
+            <img srcSet={img7} className="mr-[-150px] h-[500px] w-[600px]" />
           </div>
-          <div className="flex flex-col ml-5 w-3/4 max-md:ml-0 max-md:w-full">
-            <div className="flex gap-4 flex-col w-full max-md:mt-10 max-md:max-w-full">
-              <div className="flex flex-wrap gap-5 items-start uppercase max-md:max-w-full">
-                <div className="flex flex-col flex-1 grow shrink-0 items-start basis-0 w-fit max-md:pr-5">
-                  <input
-                    type="text"
-                    className="w-full h-14  text-lg leading-loose border-solid border-2 text-white placeholder-white px-4 bg-transparent"
-                    placeholder="Your Name*"
-                  />
+        </div>
+        <div className="w-full">
+          <div className="flex flex-col px-24 py-24 gap-4">
+            <div className="font-Rubik border-gradient text-[#1C1F35] w-fit px-4 font-semibold bg-[#E8E8E880] ">
+              Why Choose
+            </div>
+            <div className="text-13xl font-lato text-[#1C1F35]">
+              We create opportunity to reach potential
+            </div>
+            <div className="font-lato text-[#666C89]">
+              Leverage agile frameworks to provide a robust synopsis for
+              strategy foster collaborative thinking to further the overall
+              value proposition.
+            </div>
+            <div className="grid font-Rubik grid-cols-2">
+              {Cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="flex  my-2 mx-2  gap-2 flex-row"
+                >
+                  <div className="bg-gradient-to-r from-[#29FFE5] to-[#5AA5EB] rounded-full w-12 h-12 flex items-center justify-center overflow-hidden">
+                    <img
+                      srcSet={card.img}
+                      className="object-center w-[50%] h-[50%]"
+                    />
+                  </div>
+                  <div className="flex h-12 justify-center items-center">
+                    <p className="text-center flex  pt-3 items-center text-[#1C1F35] font-[480px] text-lg ">{card.title}</p>
+                  </div>
                 </div>
-                <div className="flex flex-col flex-1 grow shrink-0 items-start basis-0 w-fit max-md:pr-5">
-                  <input
-                    type="text"
-                    className="w-full h-14  text-lg leading-loose border-solid border-2 text-white placeholder-white px-4 bg-transparent"
-                    placeholder="Email*"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-5 items-start mt-2 uppercase whitespace-nowrap max-md:max-w-full">
-                <div className="flex flex-col flex-1 grow shrink-0 items-start basis-0 w-fit max-md:pr-5">
-                  <input
-                    type="email"
-                    className="w-full h-14  text-lg leading-loose border-solid border-2 text-white placeholder-white px-4 bg-transparent"
-                    placeholder="Phone No*"
-                  />
-                </div>
-                <div className="flex flex-col flex-1 grow shrink-0 items-start basis-0 w-fit max-md:pr-5">
-                  <input
-                    type="text"
-                    className="w-full h-14  text-lg leading-loose border-solid border-2 text-white placeholder-white px-4 bg-transparent"
-                    placeholder="City*"
-                  />
-                </div>
-              </div>
-              <div className="overflow-hidden text-xs leading-loose uppercase whitespace-nowrap text-neutral-500 max-md:pr-5 max-md:max-w-full">
-                <textarea
-                  className="w-full  text-lg leading-loose border-solid border-2 h-32 text-white placeholder-white px-4 bg-transparent"
-                  placeholder="Your Message"
-                />
-              </div>
-              <div className="self-center px-14 py-3 text-5xl border-solid border-2 font-semibold tracking-widest leading-none text-center text-white uppercase whitespace-nowrap rounded-3xl max-md:px-5 bg-transparent cursor-pointer">
-                Submit Message
-              </div>
+              ))}
             </div>
           </div>
         </div>

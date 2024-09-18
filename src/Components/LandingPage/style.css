@@ -1,0 +1,95 @@
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Each span starts invisible and fades in with delay */
+  .span-1, .span-2, .span-3, .span-4 {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .span-1 {
+    animation-delay: 0.5s;
+  }
+  
+  .span-2 {
+    animation-delay: 1s;
+  }
+  
+  .span-3 {
+    animation-delay: 1.5s;
+  }
+  
+  .span-4 {
+    animation-delay: 2s;
+  }
+  
+
+
+ /* Slide-in keyframes */
+@keyframes slideInBottom {
+    0% {
+      opacity: 1;
+      transform: translateY(70%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(70%);
+    }
+  }
+  
+  /* Heading animation */
+  .slide-in-heading {
+    animation: slideInBottom 5s ease-out forwards;
+    animation-iteration-count: infinite;
+    opacity: 1;
+  }
+  
+/* Keyframes for fade-in and fade-out effect */
+.container {
+    position: relative; /* Create a relative positioning context */
+    width: 100%; /* Adjust as necessary */
+    /* height: auto; Adjust based on your content */
+  }
+  
+  /* Animation keyframes for fading in and out */
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+    10%, 50% {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
+  /* Styling for fade-1 and fade-2 to overlap */
+  .fade-1, .fade-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Individual animations */
+  .fade-1 {
+    animation: fadeInOut 6s infinite;
+  }
+  
+  .fade-2 {
+    animation: fadeInOut 6s infinite;
+    animation-delay: 3s; /* This makes .fade-2 start fading in after .fade-1 fades out */
+  }
+  

@@ -1,5 +1,5 @@
 import React from "react";
-
+import img7 from "../../assets/Education/img7.svg";
 const Card8 = () => {
   return (
     <div className="bg-white w-screen">
@@ -12,7 +12,7 @@ const Card8 = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
         </div>
-        <div className="flex py-6 flex-col w-full max-md:ml-0 font-inter max-md:w-full">
+        <div className="flex sm:flex-col-reverse md:flex-row sm:gap-6 md:gap-12 py-6 w-full max-md:ml-0 font-inter max-md:w-full">
           <div className="flex gap-4 flex-col md:w-[50%] max-md:mt-10 max-md:max-w-full">
             <div className="flex flex-col grow shrink-0 items-start gap-2 basis-0 w-full max-md:pr-5">
               <div className="self-start text-[#2D2D2D] font-medium text-lg ">
@@ -54,6 +54,9 @@ const Card8 = () => {
             <div className="self-start bg-[#1C4CBF] px-5 py-3 text-mini  font-normal tracking-widest font-Poppins leading-none text-center text-white uppercase whitespace-nowrap rounded-[15px] max-md:px-5 cursor-pointer">
               Submit
             </div>
+          </div>
+          <div className="h-[500px]">
+            <img srcSet={img7} className="h-full" />
           </div>
         </div>
       </div>

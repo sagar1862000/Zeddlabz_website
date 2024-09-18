@@ -6,14 +6,14 @@ import img5 from "../../assets/img5.svg";
 const Card4 = () => {
   return (
     <div
-      className=' w-full relative bg-white flex flex-row items-start justify-start pt-[99px] px-[62px] pb-[61.4px] box-border leading-[normal] tracking-[normal] text-left text-mini text-black font-lato mq450:pl-5 mq450:pr-5 mq450:box-border'
+      className=' w-full relative bg-white flex flex-row items-start justify-start pt-[99px] sm:px-[20px] md:px-[62px] pb-[61.4px] box-border leading-[normal] tracking-[normal] text-left text-mini text-black font-lato mq450:pl-5 mq450:pr-5 mq450:box-border'
     >
       <img
         className="h-full w-full !m-[0] absolute right-[0px] bottom-[-4.3px] left-[0px] max-w-full overflow-hidden object-cover"
         alt=""
         src={img3}
       />
-      <div className="shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(36.5px)] rounded-xl w-11/12 mx-auto px-6 py-8 bg-white bg-opacity-50 backdrop-blur-lg flex-col box-border gap-2  z-[1]">
+      <div className="shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(36.5px)] px-6 rounded-xl sm:w-[98%] md:w-11/12 mx-auto  py-8 bg-white bg-opacity-50 backdrop-blur-lg flex-col box-border gap-2  z-[1]">
         <div className="w-[132px] flex flex-row items-start justify-start py-0 px-px box-border">
           <div className="flex-1 relative tracking-[2.1px] leading-[24px] uppercase font-semibold">
             Who we are

@@ -33,17 +33,8 @@ code {
   }
 }
 
-/* You may need to adjust your CSS file as follows */
-/* .card-slider-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 
-.flex {
-  display: flex;
+.border-gradient {
+  border-left: 8px solid; /* Set the border width */
+  border-image: linear-gradient(to right, #29FFE5, #5AA5EB) 1;
 }
-
-.transition-transform {
-  transition: transform 0.5s ease-in-out;
-} */

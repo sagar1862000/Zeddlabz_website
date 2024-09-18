@@ -1,0 +1,16 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.fade-In {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in; /* 2s duration and easing */
+    animation-delay: 1s; /* 1-second delay */
+    animation-fill-mode: forwards; /* Ensures the element remains visible after animation completes */
+}

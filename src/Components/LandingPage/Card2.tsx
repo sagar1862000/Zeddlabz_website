@@ -65,7 +65,7 @@ const Card2 = () => {
         </div>
         <div
           id="card-row1"
-          className="w-11/12 mx-auto gap-4 rounded-lg grid grid-cols-2 py-6 opacity-0 transform translate-y-10 transition-all duration-500 delay-400"
+          className="w-11/12 mx-auto md:gap-4 sm:gap-2 rounded-lg grid grid-cols-2 py-6 opacity-0 transform translate-y-10 transition-all duration-500 delay-400"
         >
           {Cards1.map((card, index) => (
             <div
@@ -76,8 +76,8 @@ const Card2 = () => {
                 <div className="w-full flex justify-center">
                   <img srcSet={img4} />
                 </div>
-                <div className="w-full flex justify-center">{card.Title}</div>
-                <div className="w-7/12 text-center mx-auto flex justify-center">
+                <div className="w-full flex justify-center font-semibold">{card.Title}</div>
+                <div className="md:w-7/12 sm:w-[90%] text-center mx-auto flex justify-center">
                   {card.Description}
                 </div>
               </div>
@@ -86,7 +86,7 @@ const Card2 = () => {
         </div>
         <div
           id="card-row2"
-          className="w-11/12 mx-auto gap-4 rounded-lg grid grid-cols-2 py-6 opacity-0 transform translate-y-10 transition-all duration-500 delay-400"
+          className="w-11/12 mx-auto  md:gap-4 sm:gap-2 rounded-lg grid grid-cols-2 py-6 opacity-0 transform translate-y-10 transition-all duration-500 delay-400"
         >
           {Cards2.map((card, index) => (
             <div
@@ -97,8 +97,8 @@ const Card2 = () => {
                 <div className="w-full flex justify-center">
                   <img srcSet={img4} />
                 </div>
-                <div className="w-full flex justify-center">{card.Title}</div>
-                <div className="w-7/12 text-center mx-auto flex justify-center">
+                <div className="w-full flex justify-center font-semibold">{card.Title}</div>
+                <div className="md:w-7/12 sm:w-[90%]  text-center mx-auto flex justify-center">
                   {card.Description}
                 </div>
               </div>

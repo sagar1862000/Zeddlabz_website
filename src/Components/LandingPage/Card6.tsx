@@ -42,13 +42,13 @@ const Card6 = () => {
           </div>
         </div>
         <div className="bg-white rounded-lg font-lato my-12 py-8 sm:w-screen md:w-3/5 mx-auto">
-          <div className="flex flex-col font-lato  w-full text-black max-md:max-w-full">
-            <div className="flex flex-col pb-4 justify-center items-center  w-full text-3xl leading-none max-md:max-w-full">
-              <div className="px-0.5  max-w-full font-semibold text-2xl ">
+          <div className="flex flex-col font-lato slide-in-heading w-full text-black max-md:max-w-full">
+            <div className="flex flex-col pb-4 justify-center items-center w-full text-3xl leading-none max-md:max-w-full">
+              <div className="px-0.5 max-w-full font-semibold text-2xl ">
                 We believe in defining the future
               </div>
             </div>
-            <div className=" text-mini text-center max-md:max-w-full font-normal px-24">
+            <div className="text-mini text-center max-md:max-w-full font-normal px-24 slide-in-content">
               With this insurgent mindset, we help companies at every step of
               their digital transformation journeys, from building and scaling
               cutting-edge technology solutions to transforming legacy IT
